@@ -1,0 +1,20 @@
+{
+  "name": "devternity-workshop",
+  "private": true,
+  "scripts": {
+    "start": "ffbt dev-server src",
+    "dev": "ffbt dev src",
+    "build": "ffbt build src",
+    "test": "ffbt test src",
+    "lint": "npm-run-all --parallel lint-ts lint-scss",
+    "lint-ts": "ffbt lint-ts ./src --force",
+    "lint-ts-fix": "ffbt lint-ts ./src --fix",
+    "lint-ts-watch": "onchange 'src/**/*.ts' -i -d 500 -- npm run lint-ts",
+    "lint-scss": "ffbt lint-style ./src --force",
+    "lint-scss-watch": "onchange './src/**/**/**.scss' -i -d 500 -- npm run lint-scss"
+  },
+  "dependencies": {
+    "ffbt": "^0.5.1"
+  },
+  "devDependencies": {}
+}
