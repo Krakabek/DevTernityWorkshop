@@ -1,6 +1,6 @@
 import {Roman} from "./roman";
 
-fdescribe("Roman converter should", () => {
+describe("Roman converter should", () => {
     const roman = new Roman();
     it("convert main numbers", () => {
         expect(roman.convert(1)).toEqual("I");
