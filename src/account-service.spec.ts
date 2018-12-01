@@ -1,6 +1,6 @@
 import {AccountService, BalanceService, Logger} from "./account-service";
 
-fdescribe("Acoount service", () => {
+describe("Acoount service", () => {
     let accountSerivce: AccountService;
     let balanceService: BalanceService;
     let logger: Logger;
@@ -18,12 +18,12 @@ fdescribe("Acoount service", () => {
         accountSerivce.printStatement();
 
         expect(console.log).toHaveBeenCalledWith("Date | Amount | Balance");
-        expect(console.log).toHaveBeenCalledWith(`${logger.currentDate()} | 1000 | 1000`);
         expect(console.log).toHaveBeenCalledWith(`${logger.currentDate()} | -500 | 500`);
+        expect(console.log).toHaveBeenCalledWith(`${logger.currentDate()} | 1000 | 1000`);
     });
 });
 
-fdescribe("Account service lowlevel", () => {
+describe("Account service lowlevel", () => {
     let accountSerivce: AccountService;
     let balanceService: BalanceService;
     let logger: Logger;
@@ -57,8 +57,8 @@ fdescribe("Account service lowlevel", () => {
         accountSerivce.printStatement();
 
         expect(console.log).toHaveBeenCalledWith("Date | Amount | Balance");
-        expect(console.log).toHaveBeenCalledWith(`${logger.currentDate()} | 1000 | 1000`);
         expect(console.log).toHaveBeenCalledWith(`${logger.currentDate()} | -500 | 500`);
+        expect(console.log).toHaveBeenCalledWith(`${logger.currentDate()} | 1000 | 1000`);
     })
 
 });

@@ -57,9 +57,9 @@ export class Logger {
 
     printTransactions(): void {
         console.log("Date | Amount | Balance");
-        this.operations.forEach((logEntry) => {
-            console.log(logEntry);
-        })
+        for (let i = this.operations.length - 1; i >= 0; i--) {
+            console.log(this.operations[i]);
+        }
     }
 
 }
